@@ -17,6 +17,7 @@ public class CashbackHackServiceTest {
 
         assertEquals(actual, expected);
     }
+
     @Test
     public void testRemainToBuyIfAmountZero() {
 
@@ -28,5 +29,18 @@ public class CashbackHackServiceTest {
 
         assertEquals(actual, expected);
     }
+
+    @Test
+    public void testRemainToBuyIfAmountTwoThousand() {
+
+        CashbackHackService cashbackHackService = new CashbackHackService();
+        int amount = 2000;
+
+        int actual = cashbackHackService.remain(amount);
+        int expected = 0;
+
+        assertEquals(actual, expected);
+    }
+
 
 }
